@@ -1,0 +1,16 @@
+function RepositoryItem(props){
+    return(
+        <>
+            <li>
+                <strong>{props.repository?.name ?? 'Default'}</strong>
+                <p>{props.repository?.description ?? 'Default'}</p>
+                <a href={props.repository?.link ?? 'Default'}>
+                    Acessar repositorio
+                </a>
+            </li>
+            <br/>
+        </>
+    )
+}
+
+export default RepositoryItem;
