@@ -8,7 +8,7 @@ function RepositoryItem(props){
                     Acessar repositorio
                 </a>
             </li>
-            <br/>
+            
         </>
     )
 }
