@@ -1,19 +1,38 @@
 import RepositoryItem from "./RepositoryItem";
 import '../styles/repositories.scss' 
+import { useState,useEffect } from "react";
+import axios from 'axios';
 export default function RepositoryList(){
-    const repository = {
-        name:'unform',
-        description:'Form is React',
-        link:"https://github.com/unform/unform",
+    const [repositorio,setRepositorio] = useState(false);
+    useEffect(() =>{
+        getRepo('Joaovictor144')
+        
+    },[])
+    let getRepo = async (user) =>{
+        let res = await axios.get(`https://api.github.com/users/${user}`);
+        setRepositorio(res.data);
     }
-    return(
-        <section className='repository-list'>
-            <h1>Lista de Repositorios</h1>
-            <ul>
-                <RepositoryItem repository={repository} />
-                <RepositoryItem/>
-            </ul>
-        </section>
-    );
+    if(repositorio === false){
+        return(
+            <section className='repository-list'>
+                <h1>Lista de Repositorios</h1>
+                <ul>
+                    <RepositoryItem/>
+                    aaaa
+                </ul>
+            </section>
+
+        );
+    }else {
+        return(
+            <section className='repository-list'>
+                <h1>Lista de Repositorios</h1>
+                <ul>
+                    <RepositoryItem repository={repositorio} />
+                </ul>
+            </section>
+        );
+        console.log(repositorio)
+    }
 }
  
