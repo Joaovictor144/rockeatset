@@ -2,10 +2,9 @@ function RepositoryItem(props){
     return(
         <>
             <li>
-                <img src={props.repository?.avatar_url ?? 'default'} alt={props.repository?.login ?? 'default'}/>
                 <strong>{props.repository?.name ?? 'Default'}</strong>
-                <p>{props.repository?.bio ?? 'Default'}</p>
-                <a href={props.repository?.html_url ?? 'Default'}>
+                <p>{props.repository?.description ?? 'Default'}</p>
+                <a href={props.repository?.link ?? 'Default'}>
                     Acessar repositorio
                 </a>
             </li>
@@ -15,3 +14,4 @@ function RepositoryItem(props){
 }
 
 export default RepositoryItem;
+
