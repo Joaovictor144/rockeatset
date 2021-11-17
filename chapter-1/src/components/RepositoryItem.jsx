@@ -3,10 +3,11 @@ function RepositoryItem(props){
         <>
             <li>
                 <img src={props.repository?.avatar_url ?? 'default'} alt={props.repository?.login ?? 'default'}/>
+                <br/>
                 <strong>{props.repository?.name ?? 'Default'}</strong>
                 <p>{props.repository?.bio ?? 'Default'}</p>
                 <a href={props.repository?.html_url ?? 'Default'}>
-                    Acessar repositorio
+                    Acessar Repositorio
                 </a>
             </li>
             

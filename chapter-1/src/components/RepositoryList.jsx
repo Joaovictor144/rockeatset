@@ -17,8 +17,7 @@ export default function RepositoryList(){
             <section className='repository-list'>
                 <h1>Lista de Repositorios</h1>
                 <ul>
-                    <RepositoryItem/>
-                    aaaa
+                    <h2>AGUARDANDO DADOS</h2>                    
                 </ul>
             </section>
 
@@ -32,7 +31,6 @@ export default function RepositoryList(){
                 </ul>
             </section>
         );
-        console.log(repositorio)
     }
 }
  
